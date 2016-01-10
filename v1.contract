@@ -1,0 +1,40 @@
+contract ShareTrading
+{
+    struct Owner
+    {
+        uint holding;
+    }
+    address public publisher;
+    uint public totalshare;
+    uint public price;
+    bytes32 public description;
+    mapping(address => Owner) public ownerlist;
+
+    function Publish(address pub, uint ts, uint pri, bytes32 desc)
+    {
+        publisher = pub;
+        totalshare = ts;
+        price = pri;
+        description = desc;
+        ownerlist[pub].holding = ts;
+    }
+
+    function Subscribe(address owner, uint share)
+    {
+        if(totalshare >= share)
+        {
+            ownerlist[owner].holding += share;
+            ownerlist[publisher].holding -= share;
+            totalshare = totalshare - share;
+        }
+    }
+
+    function Trade(address buyer, address seller, uint share)
+    {
+        if(ownerlist[seller].holding >= share)
+        {
+            ownerlist[seller].holding = ownerlist[seller].holding - share;
+            ownerlist[buyer].holding = ownerlist[buyer].holding + share;
+        }
+    }
+}

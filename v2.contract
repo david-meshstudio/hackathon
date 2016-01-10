@@ -1,0 +1,45 @@
+contract ShareTrading
+{
+    address public publisher;
+    uint public totalshare;
+    uint public price;
+    bytes32 public description;
+    address public owner1;
+    address public owner2;
+    uint public share1;
+    uint public share2;
+
+    function Publish(address pub, uint ts, uint pri, bytes32 desc)
+    {
+        publisher = pub;
+        totalshare = ts;
+        price = pri;
+        description = desc;
+    }
+
+    function Subscribe(address owner, uint share)
+    {
+        if(share1 == 0) {
+            owner1 = owner;
+            share1 = share;
+        } else {
+            owner2 = owner;
+            share2 = share;
+        }
+    }
+
+    function Trade(address buyer, address seller, uint share)
+    {
+        if(owner1 == buyer) {
+            if(share2 > share) {
+                share1 += share;
+                share2 -= share;
+            }
+        } else if(owner2 == buyer) {
+            if(share1 > share) {
+                share1 -= share;
+                share2 += share;
+            }
+        }
+    }
+}

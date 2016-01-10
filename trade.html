@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<meta name="viewport" content = "width = device-width, initial-scale = 1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable = no" />
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  		<script src="js/jquery.min.js"></script>
+  		<script src="js/web3.js"></script>
+  		<script src="js/script.js"></script>
+  		<link href="css/style.css" rel="stylesheet" type="text/css" />
+  		<title>Hackathon Test</title>
+	</head>
+	<body>
+		<h1>资产交易</h1>
+		<div class="content">
+			<form id="form1" onsubmit="return tradeShare()">
+				<div>
+			         <label>出售人 <span class="red">*</span></label>
+			         <input type="text" name="seller" id="seller" value="" tabindex="1" />
+			    </div>
+			    <div>
+			         <label>收购人 <span class="red">*</span></label>
+			         <input type="text" name="buyer" id="buyer" value="" tabindex="2" />
+			    </div>
+			    <div>
+			         <label>收购数量 <span class="red">*</span></label>
+			         <input type="text" name="share" id="share" value="" tabindex="3" />
+			    </div>
+				<div>
+				    <input type="submit" id="submit" value="认 购" tabindex="4"/>
+			    </div>
+			</form>
+		</div>
+		<div class="bottom nav" style="position:fixed;width:100%;height:60px;left:0px;z-index:96577238;bottom:0px;">
+			<div class="options">
+		      	<ul>
+		      		<a href="buy.html"><li class="cart">Cart</li></a>
+		      		<a href="trade.html"><li class="trade">Trade</li></a>
+		      		<a href="info.html"><li class="info">Info</li></a>
+		      		<a href="sell.html"><li class="add">Add</li></a>
+		      		<a href="person.html"><li class="gear">Gear</li></a>
+		      		<a href="tel:4008009555"><li class="call">Call</li></a>
+		      	</ul>
+		    </div>
+      		<div class="clear"></div>
+		</div>
+	</body>
+	<script>
+		$('.options .bmenu').click(function(){
+	   		$('.options li').removeClass('active'); 
+	   		$(this).toggleClass('active');
+	   		$('.menu#system-menu').hide();
+	   		$('.menu#content-menu').toggle();
+	    });
+	    $('.options .gear').click(function(){
+	   		$('.options li').removeClass('active'); 
+	   		$(this).toggleClass('active');
+	   		$('.menu#content-menu').hide();
+	   		$('.menu#system-menu').toggle();
+	    });
+	    $('.options .call').click(function(){
+
+	    });
+	    $('.options .home').click(function(){
+
+	    });
+	</script>
+</html>

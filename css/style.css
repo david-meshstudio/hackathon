@@ -1,1 +1,135 @@
-label, input { display:block; }
+html,button,input,select,textarea{font-family:sans-serif;}
+body{font-family:Arial, "Microsoft YaHei", sans-serif;background:#f1f1f1;}
+a{text-decoration:none;}
+a:focus{outline:thin dotted;}
+a:hover,a:active{color:#b33100;outline:0;}
+h1,h2,h3,h4,h5,h6{font-family: 'Source Sans Pro', sans-serif;font-weight:normal;color:black;}
+h1,h2,h3,h4,h5,h6,figcaption{text-transform:capitalize;}
+h1{font-size:2.2em;margin:0 0 0.2em 0;text-align: center;}
+h1 a{color:#006f9a;}
+h2{font-size:1.8em;margin:0 0 0.2em 0;}
+h3{font-size:1.6em;margin:0 0 0.5em 0;}
+h4{font-size:1.4em;margin:0 0 0.6em 0;}
+h5{font-size:1.3em;margin:0 0 0.7em 0;}
+h6{font-size:1.2em;margin:0.5em 0 0.2em 0;}
+
+/* options */
+.options{
+	float:right;
+	width:100%;
+	background:rgba(255,255,255,0.95);
+	border-top: 1px solid #ddd;
+}
+.options ul{
+	float:right;
+	margin:0;
+	padding:0;
+	width:100%;
+}
+.options li{
+	float:left;
+	width:16.2%;
+	height:60px;
+	display:inline-block;
+	cursor:pointer;
+	border-left:1px solid #ccc;
+	text-indent:-1000em;
+}
+.options li.active,
+.active{
+	background-color:#f2f2f2;
+}
+
+/* nav */
+nav.vertical ul li{	display:block;}/* vertical menu */
+
+.cart {background:url('../images/cart.png') no-repeat;background-size:32px 32px;background-position:center;}
+.trade {background:url('../images/trade.png') no-repeat;background-size:32px 32px;background-position:center;}
+.info {background:url('../images/info.png') no-repeat;background-size:32px 32px;background-position:center;}
+.add {background:url('../images/add.png') no-repeat;background-size:32px 32px;background-position:center;}
+.gear {background:url('../images/gear.png') no-repeat;background-size:32px 32px;background-position:center;}
+.call {background:url('../images/call.png') no-repeat;background-size:32px 32px;background-position:center;}
+
+fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em;}
+legend{border:0;padding:0;white-space:normal;*margin-left:-7px;}
+button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle;}
+button,input{line-height:normal;}
+button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;*overflow:visible;padding:0px;}
+button[disabled],input[disabled]{cursor:default;}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px;}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
+input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button{-webkit-appearance:none;}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+textarea{overflow:auto;vertical-align:top;}
+table{border-collapse:collapse;border-spacing:0;}form label{
+	font-size:14px;
+	margin-bottom: 0.4em;
+}
+form.contact-form{margin-bottom:20px;}
+form input[type=text],
+form input[type=password],textarea{
+	-webkit-appearance:none;
+	-moz-appearance:none;
+}
+form input[type="radio"]{
+	position:relative;
+	top:1px;
+}
+form div{
+	margin:0 0 0.8em 0;
+}
+form textarea{
+	height:300px;
+}
+form #description{
+	height:100px;
+}
+label{display:block;}
+form label span.red{
+	color:#ff0000;
+}
+form input[type=submit]{
+	cursor: pointer;	
+}
+form input[type=submit],
+form input[type=text],
+form input[type=password],
+form textarea{
+	padding:5px;
+}
+form input[type=text],
+form input[type=password],
+form textarea,
+form input[type=submit]{
+	background:#fafafa;
+	border:1px solid #ddd;
+	width:100%;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+form input:focus,
+form textarea:focus{
+	outline:1px solid #00baff;
+}
+form input[type=submit]{
+	width:100%;
+	background: #f9fcf7;
+	background: -moz-linear-gradient(top,  #f9fcf7 0%, #eee 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9fcf7), color-stop(100%,#eee));
+	background: -webkit-linear-gradient(top,  #f9fcf7 0%,#eee 100%);
+	background: -o-linear-gradient(top,  #f9fcf7 0%,#eee 100%);
+	background: -ms-linear-gradient(top,  #f9fcf7 0%,#eee 100%);
+	background: linear-gradient(to bottom,  #f9fcf7 0%,#eee 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fcf7', endColorstr='#eee',GradientType=0 );
+	color:#565656;
+	font-weight:bold;
+	font-size:0.8em;
+	padding:10px;
+}
+
+.inline input,.inline label{display:inline-block !important;}
+
+form {
+	margin-bottom: 40px;
+}
