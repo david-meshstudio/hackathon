@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 		<meta name="viewport" content = "width = device-width, initial-scale = 1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable = no" />
 	    <meta name="apple-mobile-web-app-capable" content="yes">
 	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -10,6 +11,34 @@
   		<title>Hackathon Test</title>
 	</head>
 	<body>
+		<h1>资产信息</h1>
+		<div class="content">
+			<img src="image/property.jpg" />
+			<form id="form1" onsubmit="return getPropertyInfo()">
+				<div>
+			         <label>资产名称 <span class="red">*</span></label>
+			         <input type="text" name="propertyname" id="propertyname" value="" tabindex="1" />
+			    </div>
+			    <div>
+			         <label>发布人 <span class="red">*</span></label>
+			         <input type="text" name="publisher" id="publisher" value="" tabindex="2" />
+			    </div>
+			    <div>
+			         <label>发行量 <span class="red">*</span></label>
+			         <input type="text" name="totalshare" id="totalshare" value="" tabindex="3" />
+			    </div>
+			    <div>
+			         <label>发行单价 <span class="red">*</span></label>
+			         <input type="text" name="price" id="price" value="" tabindex="4" />
+			    </div>
+				<div>
+				    <input type="submit" id="submit" value="查 询" tabindex="5"/>
+			    </div>
+			    <div>
+			    	<textarea name="textarea" id="info_res1" rows="30" cols="30" readonly="readonly"></textarea>
+			    </div>
+			</form>
+		</div>
 		<div class="bottom nav" style="position:fixed;width:100%;height:60px;left:0px;z-index:96577238;bottom:0px;">
 			<div class="options">
 		      	<ul>

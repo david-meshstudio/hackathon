@@ -75,7 +75,7 @@ function tradeShare() {
 	var seller = $('#seller').val();
 	var buyer = $('#buyer').val();
 	var share = $('#share').val();
-	console.log(share+' shares traded from ['+seller+'] to ['+buyer+']');
+	console.log(share+' shares traded from ['+seller+'] to ['+buyer+'].');
 	sharetrading.Trade(buyer,seller,parseInt(share));
 	return false;
 }
